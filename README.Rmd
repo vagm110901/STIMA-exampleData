@@ -17,7 +17,7 @@ This repository contains example data used in the vignettes and replication scri
 
 ## Contents
 
-The `inst/extdata/exampleData/` directory includes compressed datasets (`.zip`) and RDS file  required to reproduce 
+The `inst/extdata/exampleData/` directory includes compressed datasets (`.zip`) and `.RDS` file  required to reproduce 
 the analyses and figures described in the package [vignettes](https://github.com/vagm110901/STIMA/tree/master/vignettes).
 
 These datasets are primarily derived from:
@@ -32,14 +32,14 @@ This repository is not intended to be installed as an R package. Instead, it is 
 
 To download specific files programmatically from R, you can use:
 
-```r eval=FALSE
+```r {eval=FALSE}
 file_url <- "https://github.com/vagm110901/STIMA-exampleData/raw/refs/heads/master/inst/extdata/exampleData/File.rds"
 utils::download.file(file_url, destfile = "YourFile.rds", mode = "wb")
 ```
 
 or 
 
-```r eval=FALSE
+```r {eval=FALSE}
 zip_url <- "https://github.com/vagm110901/STIMA-exampleData/raw/refs/heads/master/inst/extdata/exampleData/File.zip"
 utils::download.file(zip_url, destfile = "YourFile.zip", mode = "wb")
 utils::unzip("YourFile.zip", exdir = "YourFolder")

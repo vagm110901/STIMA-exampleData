@@ -8,7 +8,7 @@ R package.
 ## Contents
 
 The `inst/extdata/exampleData/` directory includes compressed datasets
-(`.zip`) and RDS file required to reproduce the analyses and figures
+(`.zip`) and `.RDS` file required to reproduce the analyses and figures
 described in the package
 [vignettes](https://github.com/vagm110901/STIMA/tree/master/vignettes).
 
@@ -27,8 +27,16 @@ Instead, it is used as a remote data source.
 
 To download specific files programmatically from R, you can use:
 
-`r eval=FALSE file_url <- "https://github.com/vagm110901/STIMA-exampleData/raw/refs/heads/master/inst/extdata/exampleData/File.rds" utils::download.file(file_url, destfile = "YourFile.rds", mode = "wb")`
+``` r
+file_url <- "https://github.com/vagm110901/STIMA-exampleData/raw/refs/heads/master/inst/extdata/exampleData/File.rds"
+utils::download.file(file_url, destfile = "YourFile.rds", mode = "wb")
+```
 
 or
 
-`r eval=FALSE zip_url <- "https://github.com/vagm110901/STIMA-exampleData/raw/refs/heads/master/inst/extdata/exampleData/File.zip" utils::download.file(zip_url, destfile = "YourFile.zip", mode = "wb") utils::unzip("YourFile.zip", exdir = "YourFolder") file.remove("YourFile.zip")`
+``` r
+zip_url <- "https://github.com/vagm110901/STIMA-exampleData/raw/refs/heads/master/inst/extdata/exampleData/File.zip"
+utils::download.file(zip_url, destfile = "YourFile.zip", mode = "wb")
+utils::unzip("YourFile.zip", exdir = "YourFolder")
+file.remove("YourFile.zip")
+```
